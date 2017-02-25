@@ -1,12 +1,13 @@
-from PIL import Image
 import os
 import shutil
+
+from PIL import Image
 
 
 def collect_files(src):
     """
     Walks a python directory structure for a collection of
-    source sirectories and returns a list of files and whether
+    source directories and returns a list of files and whether
     to merge
     """
     file_list = dict()

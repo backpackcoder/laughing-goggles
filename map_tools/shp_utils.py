@@ -76,17 +76,17 @@ def find_start_line(shape_file):
     for r in recs:
         for pt in r.shape.points:
             js_str += 'new L.LatLng(' + str(pt[1]) + ', ' \
-                     + str(pt[0]) + '),'
-        # We only want fields 2, 26, and 28
-        # print r.record[26], r.record[28]
+                      + str(pt[0]) + '),'
+            # We only want fields 2, 26, and 28
+            # print r.record[26], r.record[28]
     js_str = js_str[:-1] + '];'
 
     print len(bad_recs), 'bad records'
     for idx in range(0, len(bad_recs)):
-        js_str += 'var line' + str(idx+1) + ' = ['
+        js_str += 'var line' + str(idx + 1) + ' = ['
         for pt in bad_recs[idx].shape.points:
             js_str += 'new L.LatLng(' + str(pt[1]) + ', ' \
-                     + str(pt[0]) + '),'
+                      + str(pt[0]) + '),'
         js_str = js_str[:-1] + '];'
 
     js_file = open('../node_modules/leaflet/dist/line.js', 'w')

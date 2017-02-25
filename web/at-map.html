@@ -37,7 +37,7 @@
 <div id="divMap"></div>
 <script>
     var imageryUrl = '//server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}';
-    var map = L.map('divMap').setView([0,0], 1);
+    var map = L.map('divMap').setView([0, 0], 1);
     var worldImagery = L.tileLayer(imageryUrl, {maxZoom: 18});
     worldImagery.addTo(map);
     var polyline = new L.Polyline(line, {

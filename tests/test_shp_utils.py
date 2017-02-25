@@ -1,6 +1,8 @@
-from map_tools import shp_utils
-from nose.tools import eq_
 from os import getcwd
+
+from nose.tools import eq_
+
+from map_tools import shp_utils
 
 test_shp_file = 'data/shp_files/at_centerline/at_centerline.shp'
 

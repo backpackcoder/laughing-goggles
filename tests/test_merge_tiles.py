@@ -1,15 +1,17 @@
 import os
 import shutil
-from map_tools import merge_tiles
+
 from nose.tools import eq_, ok_
 
+from map_tools import merge_tiles
+
 test_data = {
-        "16/38876/31140.png": ["tests/data/src2"],
-        "16/38877/31140.png": ["tests/data/src2"],
-        "16/38877/31141.png": ["tests/data/src1"],
-        "16/38878/31141.png": ["tests/data/src1"],
-        "16/38878/31142.png": ["tests/data/src1"],
-        "16/38877/31142.png": ["tests/data/src1", "tests/data/src2"]
+    "16/38876/31140.png": ["tests/data/src2"],
+    "16/38877/31140.png": ["tests/data/src2"],
+    "16/38877/31141.png": ["tests/data/src1"],
+    "16/38878/31141.png": ["tests/data/src1"],
+    "16/38878/31142.png": ["tests/data/src1"],
+    "16/38877/31142.png": ["tests/data/src1", "tests/data/src2"]
 }
 expected_paths = [path for path in test_data]
 src = ["tests/data/src1", "tests/data/src2"]

@@ -1,6 +1,7 @@
 import tornado.ioloop
-import tornado.web
 import tornado.template
+import tornado.web
+
 from map_tools import merge_tiles
 
 loader = tornado.template.Loader("./web")
@@ -27,7 +28,7 @@ def make_app():
 if __name__ == "__main__":
     merge_tiles.merge(["tiles/Test-Layer-1",
                        "tiles/Test-Layer-2"],
-                       "tiles/output")
+                      "tiles/output")
     app = make_app()
     app.listen(port)
     print "webapp started at http://localhost:{}".format(port)
